@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Button from '../ui/Button';
-//import { motion } from 'framer-motion';//
+import { motion } from 'framer-motion';
 
 const CTA = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();

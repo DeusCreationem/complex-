@@ -1,5 +1,5 @@
 import React from 'react';
-//import { motion } from 'framer-motion';//
+import { motion } from 'framer-motion';
 import { FaExclamationTriangle, FaMoneyBillWave, FaClock } from 'react-icons/fa';
 
 const Problem = () => {
