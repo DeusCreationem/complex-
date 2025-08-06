@@ -22,7 +22,13 @@ const CTA = () => {
     
     try {
       // Отправка данных на сервер
-      await axios.post('/api/submit-application', data);
+      await axios.post(`${import.meta.env.VITE_API_URL}/submit-application`, 
+        {
+          ...data,
+          recaptcha: recaptchaValue,
+          source: 'landing-page' // Дополнительное поле
+        }
+      );
       
       // Сброс формы и показ сообщения об успехе
       reset();

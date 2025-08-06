@@ -11,20 +11,29 @@ import Testimonials from './components/sections/Testimonials';
 import Pricing from './components/sections/Pricing';
 import CTA from './components/sections/CTA';
 import Footer from './components/layout/Footer';
+import PrivacyPage from './pages/Privacy';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <Hero />
-      <Problem />
-      <Solution />
-      <Features />
-      <Testimonials />
-      <Pricing />
-      <CTA />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={
+          <div className="min-h-screen bg-white">
+            <Header />
+            <Hero />
+            <Problem />
+            <Solution />
+            <Features />
+            <Testimonials />
+            <Pricing />
+            <CTA />
+            <Footer />
+          </div>
+        } />
+        <Route path="/privacy" element={<PrivacyPage />} />
+      </Routes>
+    </Router>
   );
 }
 
