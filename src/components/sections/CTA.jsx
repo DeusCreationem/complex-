@@ -22,14 +22,15 @@ const CTA = () => {
     
     try {
       // Отправка данных на сервер
-      await axios.post(`${import.meta.env.VITE_API_URL}/submit-application`, 
+      await axios.post(`${import.meta.env.VITE_API_URL}/submit`, 
         {
           ...data,
           recaptcha: recaptchaValue,
-          source: 'landing-page' // Дополнительное поле
+          source: 'landing-page',
+          timestamp: new Date().toISOString() 
         }
       );
-      
+
       // Сброс формы и показ сообщения об успехе
       reset();
       setIsSubmitted(true);
