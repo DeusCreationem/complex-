@@ -25,7 +25,6 @@ const CTA = () => {
       await axios.post(`${import.meta.env.VITE_API_URL}/submit`, 
         {
           ...data,
-          recaptcha: recaptchaValue,
           source: 'landing-page',
           timestamp: new Date().toISOString() 
         }
