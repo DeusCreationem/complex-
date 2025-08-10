@@ -1,7 +1,7 @@
 # frontend/Dockerfile
 
 # 1. Используем лёгкий образ Node для сборки
-FROM node:18-alpine AS build
+FROM node:22.12-alpine AS build
 
 WORKDIR /app
 
